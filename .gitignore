@@ -1,0 +1,60 @@
+# Ignore everything in the dataset folder
+backend/dataset/*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Android/IntelliJ
+**/android/.gradle
+**/android/.idea
+**/android/build
+**/android/local.properties
+**/android/*.iml
+
+# iOS
+**/ios/Pods/
+**/ios/*.xcworkspace
+**/ios/*.xcodeproj/xcuserdata
+**/ios/*.xcodeproj/project.xcworkspace
+**/ios/*.xcuserstate
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+
+# Fastlane
+android/fastlane/report.xml
+ios/fastlane/Preview.html
+ios/fastlane/screenshots
+ios/fastlane/test_output
+
+# Expo
+.expo/
+.expo-shared/
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+*.log
+*.tmp
+*.pid
+*.seed
+*.pid.lock

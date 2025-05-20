@@ -5,6 +5,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { styles } from '@/components/styles/LoginStyles';
 import type { RootStackParamList } from '@/app/navigation/AppNavigator';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import axios from 'axios';
+import { API_BASE_URL } from '@/constants/Config';
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Login'>;
 
 export default function LoginScreen() {
@@ -12,24 +14,33 @@ export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    if (!email.endsWith('@gmail.com')) {
-      Alert.alert('Invalid Email', 'Please enter a valid Gmail address ending with @gmail.com');
+  const handleLogin = async () => {
+    if (!email || !password) {
+      Alert.alert('Missing Information', 'Please fill in all fields');
       return;
     }
 
-    const hasNumber = /\d/.test(password);
-    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-    
-    if (!hasNumber || !hasSpecialChar) {
-      Alert.alert(
-        'Weak Password', 
-        'Password must contain at least:\n- 1 number\n- 1 special character'
-      );
-      return;
-    }
+    try {
+      const response = await axios.post(`${API_BASE_URL}/auth/login`, {
+        email,
+        password,
+      });
 
-    navigation.navigate('Dashboard');
+      if (response.status === 200) {
+        Alert.alert('Success', 'Login successful!');
+        navigation.navigate('Dashboard');
+      } else {
+        Alert.alert('Error', 'Invalid email or password.');
+      }
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response) {
+        console.error('Backend error during login:', error.response.data);
+        Alert.alert('Error', error.response.data.message || 'Invalid email or password.');
+      } else {
+        console.error('Unexpected error during login:', error);
+        Alert.alert('Error', 'An unexpected error occurred during login.');
+      }
+    }
   };
 
   return (

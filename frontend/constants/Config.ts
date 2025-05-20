@@ -1,0 +1,1 @@
+export const API_BASE_URL = 'http://192.168.29.58:5000'; // Updated to reflect the new IP address

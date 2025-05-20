@@ -1,3 +1,9 @@
+import sys
+import os
+# Add the root directory to Python's path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
+# Now import the required modules
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from app.models.user_model import UserModel
@@ -26,7 +32,7 @@ def register():
     if not validate_phone(phone):
         return jsonify({"message": "Invalid phone number. It must be exactly 10 digits"}), 400
     if not validate_password(password):
-        return jsonify({"message": "Weak password. It must contain letters, numbers, and be at least 6 characters."}), 400
+        return jsonify({"message": "Weak password. It must contain at least 6 characters, including letters and numbers."}), 400
 
     # Check if email already exists
     if UserModel.find_by_email(email):

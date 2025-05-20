@@ -3,164 +3,265 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#f9f9f9',
     padding: 16,
   },
   header: {
-    marginTop: 48,
-    marginBottom: 20,
+    marginTop: 40,
+    marginBottom: 16,
   },
-  welcomeText: {
-    fontSize: 24,
-    fontWeight: '300',
-    color: '#333',
+  welcome: {
+    fontSize: 22,
+    color: '#3A3502',
   },
-  username: {
-    fontSize: 28,
+  bold: {
     fontWeight: 'bold',
-    color: '#686B30',
+    color: '#3A3502',
+  },
+  subHeader: {
+    fontSize: 20,
+    color: '#3A3502',
+    marginBottom: 12,
   },
   weatherCard: {
+    backgroundColor: '#E6E6DA',
+    borderRadius: 16,
+    padding: 16,
+    marginBottom: 20,
+  },
+  weatherRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    padding: 20,
-    marginBottom: 16,
-    elevation: 2,
+    marginBottom: 10,
   },
-  weatherTemp: {
-    flexDirection: 'column',
+  weatherImage: {
+    width: 60,
+    height: 60,
   },
-  temperature: {
-    fontSize: 36,
+  weatherDegree: {
+    fontSize: 28,
     fontWeight: 'bold',
     color: '#333',
   },
-  weatherText: {
-    fontSize: 16,
+  feelsLike: {
+    fontSize: 14,
     color: '#666',
+    marginBottom: 10,
+    textAlign: 'center',
   },
-  weatherIcon: {
-    padding: 10,
+  dateText: {
+    fontSize: 14,
+    color: '#3A3502',
+    marginBottom: 6,
+    fontWeight: '600',
   },
-  notificationCard: {
-    backgroundColor: '#686B30',
-    borderRadius: 12,
+  profileCard: {
+    backgroundColor: '#E8F4D9',
+    borderRadius: 16,
     padding: 16,
     marginBottom: 20,
   },
-  notificationTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#fff',
-    marginBottom: 4,
+  profileRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
   },
-  notificationText: {
-    fontSize: 16,
-    color: '#fff',
-    marginBottom: 8,
+  profileIcon: {
+    width: 40,
+    height: 40,
+    marginRight: 12,
   },
-  joinButton: {
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    alignSelf: 'flex-start',
-    marginBottom: 8,
-  },
-  joinButtonText: {
-    color: '#686B30',
-    fontWeight: 'bold',
-  },
-  notificationSubtext: {
+  profileText: {
     fontSize: 14,
-    color: '#fff',
-    opacity: 0.8,
-  },
-  section: {
-    marginBottom: 24,
-  },
-  sectionTitle: {
-    fontSize: 22,
-    fontWeight: 'bold',
     color: '#333',
+  },
+  progressBarBackground: {
+    height: 6,
+    backgroundColor: '#ccc',
+    borderRadius: 4,
+    overflow: 'hidden',
+    marginBottom: 10,
+  },
+  progressBarFill: {
+    height: 6,
+    backgroundColor: '#3A3502',
+  },
+  profileButton: {
+    backgroundColor: '#3A3502',
+    borderRadius: 8,
+    padding: 8,
+    alignItems: 'center',
+  },
+  profileButtonText: {
+    color: '#fff',
+    fontWeight: '600',
+  },
+  landsHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginBottom: 8,
   },
-  sectionDescription: {
-    fontSize: 16,
-    color: '#666',
-    marginBottom: 12,
-  },
-  benefitsContainer: {
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    padding: 16,
-  },
-  benefitsTitle: {
-    fontSize: 18,
+  landsTitle: {
+    fontSize: 20,
     fontWeight: '600',
     color: '#333',
-    marginBottom: 12,
+  },
+  noLandText: {
+    fontSize: 14,
+    color: '#999',
+    marginBottom: 20,
+  },
+  benefitsCard: {
+    backgroundColor: '#F5F5E7',
+    borderRadius: 16,
+    padding: 16,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: 24,
+  },
+  farmerImage: {
+    width: 90, // increased size
+    height: 90,
+    marginRight: 16,
+  },
+  benefitsList: {
+    flex: 1,
   },
   benefitItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 8,
+    marginBottom: 10,
   },
   benefitText: {
-    fontSize: 16,
-    color: '#333',
+    fontSize: 14,
     marginLeft: 8,
-  },
-  storeScroll: {
-    marginHorizontal: -16,
-  },
-  storeItem: {
-    width: 200,
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    marginRight: 16,
-    padding: 16,
-  },
-  storeItemContent: {
-    flex: 1,
-  },
-  storeItemText: {
-    fontSize: 16,
     color: '#333',
-    marginBottom: 8,
   },
-  aiContainer: {
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    padding: 16,
-  },
-  aiItem: {
+  storeHeader: {
     flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: 'space-between',
     marginBottom: 8,
+    alignItems: 'center',
   },
-  aiText: {
-    fontSize: 16,
-    color: '#333',
-    marginLeft: 8,
-  },
-  safetyTip: {
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 20,
-  },
-  safetyText: {
-    fontSize: 18,
+  sectionTitle: {
+    fontSize: 20,
     fontWeight: '600',
     color: '#333',
-    marginBottom: 4,
   },
-  safetySubtext: {
+  viewMore: {
+    color: '#3A3502',
+    fontSize: 14,
+  },
+  storeGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    marginBottom: 20,
+  },
+  productCard: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 12,
+    width: '48%',
+    marginBottom: 16,
+    elevation: 2,
+  },
+  productImage: {
+    width: '100%',
+    height: 80,
+    borderRadius: 8,
+    marginBottom: 8,
+  },
+  productTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#333',
+  },
+  productPrice: {
+    fontSize: 12,
+    color: '#555',
+  },
+  productType: {
+    fontSize: 12,
+    color: '#777',
+  },
+  productActions: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 8,
+    gap: 12,
+  },
+  quantityText: {
     fontSize: 16,
-    color: '#666',
+    color: '#3A3502',
+    fontWeight: '600',
+  },
+  aiCard: {
+    backgroundColor: '#E6F0E2',
+    padding: 16,
+    borderRadius: 16,
+    marginBottom: 20,
+  },
+  aiFeature: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 6,
+  },
+  aiText: {
+    fontSize: 14,
+    marginLeft: 8,
+    color: '#333',
+  },
+  askNowButton: {
+    backgroundColor: '#3A3502',
+    borderRadius: 8,
+    padding: 10,
+    alignItems: 'center',
+    marginTop: 12,
+  },
+  askNowText: {
+    color: '#fff',
+    fontWeight: '600',
+  },
+  tipBox: {
+    backgroundColor: '#DDF5D6',
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 80, // space above bottom nav
+  },
+  tipLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#333',
+  },
+  tipText: {
+    fontSize: 14,
+    color: '#333',
+    marginTop: 4,
+  },
+  bottomNav: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#3A3502',
+    paddingVertical: 10,
+  },
+  navItem: {
+    alignItems: 'center',
+  },
+  navLabel: {
+    fontSize: 12,
+    marginTop: 4,
+    color: '#dcdcdc',
+  },
+  navLabelActive: {
+    color: '#ffffff',
+    fontWeight: 'bold',
   },
 });

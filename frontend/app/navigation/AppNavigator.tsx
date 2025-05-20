@@ -13,6 +13,7 @@ import PersonalInfo2Screen from '@/components/screens/PersonalInfo2Screen';
 import PersonalInfo3Screen from '@/components/screens/PersonalInfo3Screen';
 import DashboardScreen from '@/components/screens/DashboardScreen';
 import PhoneLoginScreen from '@/components/screens/PhoneLogin';
+import ScanScreen from '@/components/screens/ScanScreen';
 
 export type RootStackParamList = {
   Splash1: undefined;
@@ -27,6 +28,7 @@ export type RootStackParamList = {
   PersonalInfo3: undefined;
   Dashboard: undefined;
   PhoneLogin: undefined;
+  Scan: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -52,6 +54,7 @@ export default function AppNavigator() {
       <Stack.Screen name="PersonalInfo3" component={PersonalInfo3Screen} />
       <Stack.Screen name="Dashboard" component={DashboardScreen} />
       <Stack.Screen name="PhoneLogin" component={PhoneLoginScreen} />
+      <Stack.Screen name="Scan" component={ScanScreen} />
     </Stack.Navigator>
   );
 }

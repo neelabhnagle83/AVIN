@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="926fc48e-ffae-4f40-ae98-60fdb15ef8c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/models/crop_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/models/crop_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/routes/disease_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/routes/disease_routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/services/disease_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/services/disease_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/navigation/AppNavigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/navigation/AppNavigator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/screens/DashboardScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/screens/DashboardScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/screens/LoginScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/screens/LoginScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/screens/SignupScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/screens/SignupScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/styles/DashboardStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/styles/DashboardStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2wmjL0NMzurxcU6TzVZhXkyjFsj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/AVIN"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="926fc48e-ffae-4f40-ae98-60fdb15ef8c6" name="Changes" comment="" />
+      <created>1746653583283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746653583283</updated>
+    </task>
+    <servers />
+  </component>
+</project>

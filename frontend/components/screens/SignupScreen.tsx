@@ -6,6 +6,8 @@ import { styles } from '@/components/styles/SignupStyles';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '@/app/navigation/AppNavigator';
 import CountryPicker from './PhoneLoginPicker';
+import axios from 'axios';
+import { API_BASE_URL } from '@/constants/Config';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Signup'>;
 
@@ -17,7 +19,7 @@ export default function SignupScreen() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSignup = () => {
+  const handleSignup = async () => {
     // Validate all fields
     if (!email || !name || !phoneNumber || !password) {
       Alert.alert('Missing Information', 'Please fill in all fields');
@@ -30,17 +32,45 @@ export default function SignupScreen() {
     }
 
     const hasNumber = /\d/.test(password);
-    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-    
-    if (!hasNumber || !hasSpecialChar) {
+    // Removed special character validation
+    if (!hasNumber) {
       Alert.alert(
         'Weak Password', 
-        'Password must contain:\n- At least 1 number\n- At least 1 special character'
+        'Password must contain:\n- At least 1 number'
       );
       return;
     }
 
-    navigation.navigate('PersonalInfo1');
+    console.log('Password being sent:', password);
+
+    try {
+      const response = await axios.post(`${API_BASE_URL}/auth/register`, {
+        email,
+        name,
+        phone: phoneNumber, // Send only the 10-digit phone number without the country code
+        password,
+      });
+
+      if (response.status === 201) {
+        Alert.alert('Success', 'User registered successfully!');
+        navigation.navigate('PersonalInfo1');
+      } else {
+        Alert.alert('Error', 'Failed to register user.');
+      }
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          console.error('Backend error during signup:', error.response.data);
+          Alert.alert('Error', error.response.data.message || 'An error occurred during signup.');
+        } else {
+          console.error('Axios error during signup:', error.message);
+          Alert.alert('Network Error', 'Unable to connect to the server. Please check your network or try again later.');
+        }
+      } else {
+        console.error('Unexpected error during signup:', error);
+        Alert.alert('Error', 'An unexpected error occurred during signup.');
+      }
+    }
   };
 
   return (

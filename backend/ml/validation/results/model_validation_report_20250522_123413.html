@@ -1,0 +1,112 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Plant Disease Model Validation Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
+            h1, h2, h3 { color: #2c3e50; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .container { max-width: 1200px; margin: 0 auto; }
+            .metrics { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 20px; }
+            .metric-card { background-color: #f8f9fa; border-radius: 5px; padding: 15px; margin: 10px; flex: 1; min-width: 200px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+            .metric-value { font-size: 24px; font-weight: bold; margin: 10px 0; color: #3498db; }
+            .visual-container { margin: 30px 0; text-align: center; }
+            .visual-container img { max-width: 100%; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Plant Disease Model Validation Report</h1>
+            <p>Generated on: 2025-05-22 12:34:11</p>
+            
+            <h2>Overall Performance</h2>
+            <div class="metrics">
+                <div class="metric-card">
+                    <h3>Total Images</h3>
+                    <div class="metric-value">0</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Disease Classes</h3>
+                    <div class="metric-value">2</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Overall Accuracy</h3>
+                    <div class="metric-value">0.00%</div>
+                </div>
+                <div class="metric-card">
+                    <h3>Top-3 Accuracy</h3>
+                    <div class="metric-value">0.00%</div>
+                </div>
+            </div>
+            
+            <h2>Performance Visualizations</h2>
+            
+            <div class="visual-container">
+                <h3>Accuracy by Disease Class</h3>
+                <img src="visualizations/accuracy_by_disease.png" alt="Accuracy by Disease">
+            </div>
+    
+        <div class="visual-container">
+            <h3>Confidence: Correct vs. Incorrect Predictions</h3>
+            <img src="visualizations/confidence_comparison.png" alt="Confidence Comparison">
+        </div>
+    
+        <h2>Disease-Specific Results</h2>
+        <table>
+            <tr>
+                <th>Disease</th>
+                <th>Total Images</th>
+                <th>Accuracy</th>
+                <th>Top-3 Accuracy</th>
+                <th>Avg. Confidence (Correct)</th>
+                <th>Avg. Confidence (Incorrect)</th>
+            </tr>
+    
+            <tr>
+                <td>apple cedar rust</td>
+                <td>0</td>
+                <td>0.00%</td>
+                <td>0.00%</td>
+                <td>0.00%</td>
+                <td>0.00%</td>
+            </tr>
+        
+            <tr>
+                <td>apple black rot</td>
+                <td>0</td>
+                <td>0.00%</td>
+                <td>0.00%</td>
+                <td>0.00%</td>
+                <td>0.00%</td>
+            </tr>
+        
+        </table>
+    
+        <h2>Recommendations</h2>
+        <ul>
+    <li>The model requires further improvement for reliable real-world use.</li>
+            <li>For the specific Cedar Rust vs Black Rot confusion issue:</li>
+            <ul>
+                <li>Consider collecting more diverse training examples of both diseases</li>
+                <li>Implement specialized preprocessing to enhance the distinctive orange spots of Cedar Rust</li>
+                <li>Add a post-processing rule to check for characteristic orange color in Cedar Rust images</li>
+            </ul>
+        
+        </ul>
+        
+        <h2>Next Steps</h2>
+        <ol>
+            <li>Review the most confused disease pairs and consider collecting additional training data.</li>
+            <li>For specific confusions, implement specialized preprocessing steps to highlight discriminative features.</li>
+            <li>Consider model fine-tuning focused on the problematic classes.</li>
+            <li>Evaluate performance improvements by re-running this validation after model updates.</li>
+        </ol>
+    
+        </div>
+    </body>
+    </html>
+    

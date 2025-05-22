@@ -1,0 +1,47 @@
+{
+    "disease_analysis": {
+        "apple cedar rust": {
+            "name": "apple cedar rust",
+            "expected_class": -1,
+            "expected_disease": "Unknown",
+            "total_images": 0,
+            "successful_predictions": 0,
+            "correct_predictions": 0,
+            "in_top3_predictions": 0,
+            "accuracy": 0,
+            "top3_accuracy": 0,
+            "processing_success_rate": 0,
+            "avg_confidence_correct": 0,
+            "avg_confidence_incorrect": 0,
+            "class_distribution": {},
+            "misclassified_count": 0,
+            "common_mistakes": []
+        },
+        "apple black rot": {
+            "name": "apple black rot",
+            "expected_class": -1,
+            "expected_disease": "Unknown",
+            "total_images": 0,
+            "successful_predictions": 0,
+            "correct_predictions": 0,
+            "in_top3_predictions": 0,
+            "accuracy": 0,
+            "top3_accuracy": 0,
+            "processing_success_rate": 0,
+            "avg_confidence_correct": 0,
+            "avg_confidence_incorrect": 0,
+            "class_distribution": {},
+            "misclassified_count": 0,
+            "common_mistakes": []
+        }
+    },
+    "confusion_matrix": null,
+    "common_confusions": [],
+    "overall_metrics": {
+        "total_diseases_tested": 2,
+        "total_images": 0,
+        "overall_accuracy": 0,
+        "overall_top3_accuracy": 0
+    },
+    "timestamp": "2025-05-22 11:53:32"
+}
